@@ -17,6 +17,11 @@ func (cs *CalculatorSuite) calculatorIsCleared() error {
 	return nil
 }
 
+func (cs *CalculatorSuite) theCalculatorIsReady() error {
+	cs.calc.Clear()
+	return nil
+}
+
 func (cs *CalculatorSuite) iPress(num int) error {
 	cs.calc.Press(num)
 	return nil
@@ -51,6 +56,7 @@ func InitializeScenario(ctx *godog.ScenarioContext) {
 		ScenarioContext: ctx,
 	}
 	ctx.Step(`^calculator is cleared$`, calInstance.calculatorIsCleared)
+	ctx.Step(`^the calculator is ready$`, calInstance.theCalculatorIsReady)
 	ctx.Step(`^i add (\d+)$`, calInstance.iAdd)
 	ctx.Step(`^i multiply by (\d+)$`, calInstance.iMultiply)
 	ctx.Step(`^i press (\d+)$`, calInstance.iPress)
