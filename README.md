@@ -10,5 +10,5 @@ go install github.com/cucumber/godog/cmd/godog@latest
 
 To run the acceptance test using godog(cucumber), cd test and use 'godog run'
 
-This link will help
+This [link]([url](https://www.linkedin.com/pulse/demonstrating-bdd-behavior-driven-development-go-artur-neumann/)) will help
 https://www.linkedin.com/pulse/demonstrating-bdd-behavior-driven-development-go-artur-neumann/
